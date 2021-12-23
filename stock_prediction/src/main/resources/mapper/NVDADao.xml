@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.launchcode.stocks.dao.NVDADao">
+    <resultMap id="BaseResultMap" type="org.launchcode.stocks.models.domain.NVDA">
+        <id column="date" jdbcType="TEXT" property="date" />
+        <result column="open" jdbcType="LONGVARCHAR" property="open" />
+        <result column="high" jdbcType="FLOAT" property="high" />
+        <result column="low" jdbcType="FLOAT" property="low" />
+        <result column="close" jdbcType="FLOAT" property="close" />
+        <result column="adj_close" jdbcType="FLOAT" property="adjClose" />
+        <result column="vol" jdbcType="INTEGER" property="vol" />
+    </resultMap>
+    <sql id="Base_Column_List">
+    date, close
+  </sql>
+    <select id="selectNVDAByWeek" resultType="org.launchcode.stocks.models.domain.NVDA">
+        SELECT
+        <include refid="Base_Column_List" />
+        from nvda
+        WHERE date IN
+        <foreach collection="list" item="id" index="index" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </select>
+</mapper>

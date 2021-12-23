@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.launchcode.stocks.dao.ARIAMDao">
+    <resultMap id="BaseResultMap" type="org.launchcode.stocks.models.domain.ARIAM">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="date" jdbcType="TEXT" property="date" />
+        <result column="name" jdbcType="STRING" property="name" />
+        <result column="pred" jdbcType="FLOAT" property="pred" />
+    </resultMap>
+    <sql id="Base_Column_List">
+    date, close
+  </sql>
+    <select id="selectAAPLPredData" resultType="org.launchcode.stocks.models.domain.AAPL">
+        SELECT
+        <include refid="Base_Column_List" />
+        from ariam_pred
+        WHERE name = "AAPL" and
+         date IN
+        <foreach collection="list" item="id" index="index" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </select>
+    <select id="selectKOPredData" resultType="org.launchcode.stocks.models.domain.KO">
+        SELECT
+        <include refid="Base_Column_List" />
+        from ariam_pred
+        WHERE name = "KO" and
+        date IN
+        <foreach collection="list" item="id" index="index" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </select>
+    <select id="selectNVDAPredData" resultType="org.launchcode.stocks.models.domain.NVDA">
+        SELECT
+        <include refid="Base_Column_List" />
+        from ariam_pred
+        WHERE name = "NVDA" and
+        date IN
+        <foreach collection="list" item="id" index="index" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </select>
+    <select id="selectPFEPredData" resultType="org.launchcode.stocks.models.domain.PFE">
+        SELECT
+        <include refid="Base_Column_List" />
+        from ariam_pred
+        WHERE name = "PFE" and
+        date IN
+        <foreach collection="list" item="id" index="index" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </select>
+    <select id="selectTLSAPredData" resultType="org.launchcode.stocks.models.domain.TLSA">
+        SELECT
+        <include refid="Base_Column_List" />
+        from ariam_pred
+        WHERE name = "TLSA" and
+        date IN
+        <foreach collection="list" item="id" index="index" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </select>
+</mapper>

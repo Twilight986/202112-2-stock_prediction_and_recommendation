@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+
+<head th:replace="template :: head">
+</head>
+<body>
+<div class="container">
+
+    <div id="top" th:include="template :: masthead"></div>
+
+    <div id="middle">
+
+        <p>Welcome!</p>
+
+    </div>
+
+    <div th:replace="template :: footer"></div>
+</div>
+</body>
+</html>

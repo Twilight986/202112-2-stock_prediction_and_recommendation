@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+
+<head th:replace="template :: head">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div id="top" th:include="template :: masthead"></div>
+
+    <div id="middle">
+
+        <form method="post" action="/quote" th:fragment="form">
+            <fieldset>
+                <div class="form-group">
+                    <input autofocus="true" class="form-control" name="symbol" placeholder="Symbol" type="text"/>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">Get Quote</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <div th:replace="template :: footer"></div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+
+<head th:replace="template :: head">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div id="top" th:include="template :: masthead"></div>
+
+    <div id="middle">
+
+        <p th:text="${confirmMessage}"></p>
+        <p>Make another transaction, or <a href="/portfolio">view your portfolio</a></p>
+
+        <div method="post" th:action="${action}" th:replace="transaction_form :: form"></div>
+    </div>
+
+    <div th:replace="template :: footer"></div>
+
+</div>
+
+</body>
+
+</html>

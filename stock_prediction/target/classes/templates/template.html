@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head lang="en" th:fragment="head">
+    <meta charset="UTF-8" />
+    <title th:text="*{title}?: 'Spring Stocks'"></title>
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}" />
+    <link th:href="@{/css/bootstrap-theme.min.css}" rel="stylesheet" />
+    <link th:href="@{/css/styles.css}" rel="stylesheet" />
+
+    <script th:src="@{/js/jquery-1.11.1.min.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <script th:src="@{/js/scripts.js}"></script>
+
+    <style>
+        td {text-align: left;}
+    </style>
+
+</head>
+<body>
+    <div class="container">
+
+        <div id="top" th:fragment="masthead">
+            <a href="/" style="display:block;"><img alt="Spring Stocks" src="/img/logo.png"/></a>
+            <ul class="nav nav-pills" style="margin:5px auto 20px;display:inline-block;">
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/quote">Quote</a></li>
+                <li><a href="/buy">Buy</a></li>
+                <li><a href="/sell">Sell</a></li>
+            </ul>
+        </div>
+
+        <div id="middle">
+
+        </div>
+
+        <div id="bottom" th:fragment="footer">
+            <p><a href="/logout">Log Out</a></p>
+        </div>
+
+    </div>
+</body>
+</html>
