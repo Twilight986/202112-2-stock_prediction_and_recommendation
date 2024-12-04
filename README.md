@@ -1,5 +1,18 @@
-# stock_prediction_eecs6893_21fall_group2
- group project for EECS6893, 21FALL, group2
+# Stock Market Analysis Dashboard
+ A web-based financial data visualization tool built with React and Ant Design, analyzing historical market data from Yahoo Finance. This project demonstrates the integration of financial APIs, data processing, and modern web development technologies.
+
+## Features
+1. Interactive dashboard built with React and Ant Design components
+2. Historical stock data visualization from Yahoo Finance (3-year timeframe)
+3. Multi-stock comparison capability (up to 5 stocks)
+4. Technical indicators and trend analysis
+5. Custom stock watchlist functionality
+
+## Tech Stack
+1. Tech Stack
+2. Frontend: React, Ant Design
+3. Data Source: Yahoo Finance API
+4. Data Analysis: Python
 
 ## Quick Start
 
