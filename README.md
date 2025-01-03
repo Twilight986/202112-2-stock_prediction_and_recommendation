@@ -7,6 +7,8 @@
 3. Multi-stock comparison capability (up to 5 stocks)
 4. Technical indicators and trend analysis
 5. Custom stock watchlist functionality
+6. Flexible data input support - users can replace the default dataset with their own historical data to analyze different time periods
+7. Prediction model adaptable to custom datasets - validate results across various timeframes by substituting your own market data
 
 ## Tech Stack
 1. Tech Stack
