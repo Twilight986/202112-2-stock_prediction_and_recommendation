@@ -1,0 +1,17 @@
+# Intellij
+.idea
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# node
+node_modules
+npm-debug.log
+
+# other
+# dist/
+# !dist/*.html
+
+java/**/*.java
