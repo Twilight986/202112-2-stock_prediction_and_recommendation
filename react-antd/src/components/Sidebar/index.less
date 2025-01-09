@@ -1,0 +1,83 @@
+
+@sidebarCollapsible: true; 
+
+.ant-layout-sidebar-trigger {
+  position: fixed;
+  text-align: center;
+  width: inherit;
+  bottom: 0;
+  cursor: pointer;
+  height: 42px;
+  line-height: 48px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  & when not (@sidebarCollapsible = true) {
+    display: none;
+  }
+}
+
+.ant-layout-sidebar-base {
+  background: #404040;
+  position: absolute;
+  overflow: auto;
+  padding-bottom: 24px;
+  transition: all 0.3s ease;
+
+  & when (@sidebarCollapsible = true) {
+    height: calc(~"100% - 42px"); 
+  }
+  & when not (@sidebarCollapsible = true) {
+    height: 100%;
+  }
+}
+
+.ant-layout-sidebar {
+  width: 224px; 
+  .ant-layout-sidebar-base; 
+}
+
+.ant-layout-sidebar-collapse {
+  width: 64px; 
+  .ant-layout-sidebar-base;
+}
+
+.ant-layout-sidebar > .ant-menu {
+  margin-bottom: 20px;
+}
+
+.ant-layout-sidebar > .ant-menu > .ant-menu-item {
+  margin: 16px 0;
+}
+
+.ant-layout-sidebar > .ant-menu > .ant-menu-item .nav-text {
+  vertical-align: baseline;
+  display: inline-block;
+}
+
+.ant-layout-sidebar > .ant-menu .invisible-nav-text {
+  font-size: 0px;
+}
+
+.ant-layout-sidebar > .ant-menu > .ant-menu-item > .anticon {
+  transition: font-size .3s;
+}
+
+.ant-layout-sidebar-collapse > .ant-menu .anticon {
+  font-size: 16px;
+  display: inline-block;
+}
+
+.ant-layout-sidebar-collapse > .ant-menu .ant-menu-submenu-title:after {
+  content: ''; 
+}
+
+.ant-layout-sidebar-collapse > .ant-menu .nav-text {
+  display: none; 
+}
+
+.ant-layout-sidebar-collapse > .ant-menu .invisible-nav-text {
+  font-size: 16px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
