@@ -1,0 +1,4 @@
+# This is a placeholder file used to ignore all contents within this directory while preserving the directory structure itself. You will find another .gitignore file in react-antd folder
+*
+*/
+!.gitignore
