@@ -1,7 +1,10 @@
 # Stock Market Analysis Dashboard
  A web-based financial data visualization tool built with React and Ant Design, analyzing historical market data from Yahoo Finance. This project demonstrates the integration of financial APIs, data processing, and modern web development technologies.
 
-## Features
+## Methodologies
+Please refer https://www.preprints.org/manuscript/202501.1003/v2 for details. We have published it as a research article.
+
+## Features of platform
 1. Interactive dashboard built with React and Ant Design components
 2. Historical stock data visualization from Yahoo Finance (3-year timeframe)
 3. Multi-stock comparison capability (up to 5 stocks)
